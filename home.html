@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="block">Прогноз погоды</div>
+        <div class="block1">
+            <div class="block1"> <a href=""> Новости</a></div>
+            <div class="block1"> <a href="">Карты</a> </div>
+            <div class="block1"><a href="">Информеры</a></div>
+        </div>
+
+    </header>
+
+    <div class="middle">
+        <div class="text">
+            <form name="cities" method="POST" action="{{ url_for('home') }}>
+                <label for="city">Выберите город:</label>
+            <select name="cityname" id="city">
+                <option value="">--Please choose an option--</option>
+                <option value="Astana">Astana</option>
+                <option value="Almaty">Almaty</option>
+            </select>
+            <input type="submit" name="submit" value="Выбрать" >
+               <div class="weather">{{text}} </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+</body>
+</html>>
